@@ -1,0 +1,18 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/app.css",
+    "inputFile": "wwwroot/css/app.scss"
+  },
+  {
+    "outputFile": "wwwroot/admin/css/app.css",
+    "inputFile": "wwwroot/admin/css/app.scss"
+  },
+  {
+    "outputFile": "wwwroot/admin/css/admin.css",
+    "inputFile": "wwwroot/admin/css/admin.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/StyleSheet.css",
+    "inputFile": "wwwroot/css/StyleSheet.scss"
+  }
+]

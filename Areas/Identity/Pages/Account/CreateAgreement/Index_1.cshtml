@@ -1,0 +1,303 @@
+﻿@page
+@using BasePackageModule1.Areas.Identity.Pages.Account.Manage
+@model IndexModel
+@{ Layout = "~/Areas/Identity/Pages/Account/Manage/_Layout.cshtml"; }
+
+<h2>Create Agreements</h2>
+<hr>
+<div class="row">
+    <div class="col-md-12 col-lg-8 col-sm-12 ml-auto mr-auto">
+        
+        <form>
+            <h6>1. Property Details</h6>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+
+                    <input type="text" class="form-control" placeholder="Unit No. & Building Name" id="inputEmail4">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+
+                    <input type="text" class="form-control" placeholder="Road, Locality and Land Mark" id="inputEmail4">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputState">Property Type</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputState">Property Use</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+            </div>
+            <h6>2. Owner/Licensor Details</h6>
+            <hr />
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        File Details
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-center ml-auto" id="exampleModalLabel">File Details</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-row">
+
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> First Name</label>
+                                            <input type="text" class="form-control" placeholder="First Name">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> Middle Name</label>
+                                            <input type="text" class="form-control" placeholder="Middle Name">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> Last Name</label>
+                                            <input type="text" class="form-control" placeholder="Last name">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> Salutation</label>
+                                            <select id="inputState" class="form-control">
+                                                <option selected>Choose...</option>
+                                                <option>Mr.</option>
+                                                <option>Miss.</option>
+                                                <option>Mrs.</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> Age</label>
+                                            <input type="number" class="form-control" placeholder="Age">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> PAN</label>
+                                            <input type="number" class="form-control" placeholder="PAN">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <div class="form-group">
+                                                <label for="exampleFormControlTextarea1">Address</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+                        Upload Doucuments
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-center ml-auto" id="exampleModalLabel">Upload Doucuments</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-row">
+
+                                        <div class="form-group col-md-6">
+                                            <label for="exampleFormControlFile1">
+                                                PAN
+                                            </label>
+                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="exampleFormControlFile1">Aadhar</label>
+                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h6>4. Tenant/Licensee Details</h6>
+            <hr />
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        File Details
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-center" id="exampleModalLabel">File Details</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-row">
+
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> First Name</label>
+                                            <input type="text" class="form-control" placeholder="First Name">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> Middle Name</label>
+                                            <input type="text" class="form-control" placeholder="Middle Name">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> Last Name</label>
+                                            <input type="text" class="form-control" placeholder="Last name">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> Salutation</label>
+                                            <select id="inputState" class="form-control">
+                                                <option selected>Choose...</option>
+                                                <option>Mr.</option>
+                                                <option>Miss.</option>
+                                                <option>Mrs.</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> Age</label>
+                                            <input type="number" class="form-control" placeholder="Age">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> PAN</label>
+                                            <input type="number" class="form-control" placeholder="PAN">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <div class="form-group">
+                                                <label for="exampleFormControlTextarea1">Address</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+                        Upload Doucuments
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-center ml-auto" id="exampleModalLabel">Upload Doucuments</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-row">
+
+                                        <div class="form-group col-md-6">
+                                            <label for="exampleFormControlFile1">
+                                                PAN
+                                            </label>
+                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="exampleFormControlFile1">Aadhar</label>
+                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h6>3. Tenant/Licensee Details</h6>
+            <hr />
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    <label for="exampleFormControlFile1">
+                        Average Rent
+                    </label>
+                    <input type="number" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="exampleFormControlFile1">Security Deposit</label>
+                    <input type="number" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+
+            </div>
+            <h6>5. Date and Duration</h6>
+            <hr />
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    <label for="exampleFormControlFile1">
+                        No. of Month
+                    </label>
+                    <input type="number" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="exampleFormControlFile1">Start Date</label>
+                    <input type="date" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+
+            </div>
+            <button type="submit" class="btn btn-block btn-success">Submit</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+﻿@model IEnumerable<BasePackageModule1.Models.Page>
+
+<div class="banner-area bg-4">
+    <div class="container">
+        <div class="breadcrumb-text">
+            <h2>Event</h2>
+            <div class="breadcrumb-bar">
+                <ul class="breadcrumb">
+                    <li><a asp-action="Index" asp-controller="Home">Home</a></li>
+                    <li>Event</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="event-page ptb-120 event-section ptb-sm-60">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <!-- Single Item Start -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="ht-single-event">
+                        <div class="ht-event-img">
+                            <a href="event-details.html">
+                                <img src="@item.Image" alt="">
+
+                                
+                                <span class="event-time">@item.CreatedAt.Day <span>@item.CreatedAt.Date.Month</span></span>
+                            </a>
+                        </div>
+                        <div class="ht-event-text">
+                            <h4><a asp-action="Details" asp-controller="Page" asp-route-id="@item.Id">@item.Name </a></h4>
+                            <div class="ht-event-info">
+                                <span class="ht-s-event-info"><i class="zmdi zmdi-time"></i>Started On: @item.CreatedAt.ToLongTimeString()
+                                </span>
+                                <span class="ht-s-event-info"><i class="zmdi zmdi-pin"></i>India</span>
+                            </div>
+                            @*<p></p>*@
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Item End -->
+            }
+
+           
+        </div>
+    </div>
+</div>

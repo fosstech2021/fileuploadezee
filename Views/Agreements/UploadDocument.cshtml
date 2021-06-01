@@ -1,0 +1,349 @@
+﻿@model BasePackageModule1.Models.Agreement
+
+
+<section class="page-banner">
+    <div class="image-layer" style="background-image:url(images/background/image-7.jpg);"></div>
+    <div class="shape-1"></div>
+    <div class="shape-2"></div>
+
+</section>
+<section class="news-section">
+    <div class="auto-container">
+        <div class="row">
+            <div class="col-md-8 ml-auto mr-auto">
+
+
+                @*<div id="accordion">
+            <form asp-action="UploadDocument" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Owner Information
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                1.
+                                <label asp-for="OwnerFullName" class="control-label"></label>
+                                <input asp-for="OwnerFullName" class="form-control" />
+                                <span asp-validation-for="OwnerFullName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label asp-for="OwnerMobile" class="control-label"></label>
+                                <input asp-for="OwnerMobile" class="form-control" />
+                                <span asp-validation-for="OwnerMobile" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label asp-for="OwnerPancard" class="control-label"></label>
+                                <input name="OwnerPancard" type="file" accept="image/*" class="form-control" />
+                                <span asp-validation-for="OwnerPancard" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label asp-for="AadharCard" class="control-label"></label>
+                                <input name="AadharCard" type="file" accept="image/*" class="form-control" />
+                                <span asp-validation-for="AadharCard" class="text-danger"></span>
+                            </div>
+                            <button type="button" id="button">Add Row</button>
+                        </div>
+                        <div class="form-row d-none">
+                            <div class="form-group col-md-3">
+                                2.
+                                <label asp-for="OwnerFullName" class="control-label"></label>
+                                <input asp-for="OwnerFullName" class="form-control" />
+                                <span asp-validation-for="OwnerFullName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label asp-for="OwnerMobile" class="control-label"></label>
+                                <input asp-for="OwnerMobile" class="form-control" />
+                                <span asp-validation-for="OwnerMobile" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label asp-for="OwnerPancard" class="control-label"></label>
+                                <input name="OwnerPancard" type="file" accept="image/*" class="form-control" />
+                                <span asp-validation-for="OwnerPancard" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label asp-for="AadharCard" class="control-label"></label>
+                                <input name="AadharCard" type="file" accept="image/*" class="form-control" />
+                                <span asp-validation-for="AadharCard" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-row d-none">
+                            <div class="form-group col-md-3">
+                                3.
+                                <label asp-for="OwnerFullName" class="control-label"></label>
+                                <input asp-for="OwnerFullName" class="form-control" />
+                                <span asp-validation-for="OwnerFullName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label asp-for="OwnerMobile" class="control-label"></label>
+                                <input asp-for="OwnerMobile" class="form-control" />
+                                <span asp-validation-for="OwnerMobile" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label asp-for="OwnerPancard" class="control-label"></label>
+                                <input name="OwnerPancard" type="file" accept="image/*" class="form-control" />
+                                <span asp-validation-for="OwnerPancard" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label asp-for="AadharCard" class="control-label"></label>
+                                <input name="AadharCard" type="file" accept="image/*" class="form-control" />
+                                <span asp-validation-for="AadharCard" class="text-danger"></span>
+                            </div>
+
+                        </div>
+                        <button type="button" id="button">Add Row</button>
+                        <div class="card-body">
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Tenants Information:
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="form-row">
+
+
+                                <div class="form-group col-md-3">
+                                    <label asp-for="tenantFullName" class="control-label"></label>
+                                    <input asp-for="tenantFullName" class="form-control" />
+                                    <span asp-validation-for="tenantFullName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label asp-for="tenantMobile" class="control-label"></label>
+                                    <input asp-for="tenantMobile" class="form-control" />
+                                    <span asp-validation-for="tenantMobile" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label asp-for="tenantPancard" class="control-label"></label>
+                                    <input name="tenantPancard" type="file" accept="image/*" class="form-control" />
+                                    <span asp-validation-for="tenantPancard" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label asp-for="tenantAadharCard" class="control-label"></label>
+                                    <input name="tenantAadharCard" type="file" accept="image/*" class="form-control" />
+                                    <span asp-validation-for="tenantAadharCard" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="RentOnPremises" class="control-label"></label>
+                                <textarea asp-for="RentOnPremises" class="form-control"></textarea>
+                                <span asp-validation-for="RentOnPremises" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mt-4">
+                    <input type="submit" value="Upload" class="btn btn-primary btn-block" />
+                </div>
+            </form>
+        </div>*@
+
+
+                <div class="container">
+                    <div class="row clearfix">
+                        <div class="col-md-12 table-responsive">
+                            <form asp-action="UploadDocument" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <h6>Owners Details.</h6>
+                                    <textarea asp-for="RentOnPremises" rows="3" class="form-control"></textarea>
+                                    <span asp-validation-for="RentOnPremises" class="text-danger"></span>
+                                </div>
+
+                                <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+                                    <h6>Owners Details.</h6>
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">
+                                                Name
+                                            </th>
+                                            <th class="text-center">
+                                                Phone
+                                            </th>
+                                            <th class="text-center">
+                                                Pancard
+                                            </th>
+                                            <th class="text-center">
+                                                Aadhaar Card
+                                            </th>
+                                            <th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;">
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr id='addr0' data-id="0" class="hidden">
+                                            <td data-name="name">
+                                                <input type="text" name='OwnerFullName' placeholder='Name' class="form-control" />
+                                            </td>
+                                            <td data-name="mail">
+                                                <input type="text" name='OwnerMobile' data-val-maxlength-max="10" placeholder='Email' class="form-control" />
+                                            </td>
+                                            <td data-name="text">
+                                                <input type="file" name='OwnerPancard' placeholder='Email' class="form-control" />
+                                            </td>
+                                            <td data-name="text">
+                                                <input type="file" name='AadharCard' placeholder='Email' class="form-control" />
+                                            </td>
+
+                                            <td data-name="del">
+                                                <button name="del0" class='btn btn-danger glyphicon glyphicon-remove row-remove'><span aria-hidden="true">×</span></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <a id="add_row" class="btn btn-primary float-right mb-4">Add Owner</a>
+                                </table>
+                               
+                                <div class="form-row">
+
+
+                                    <div class="form-group col-md-3">
+                                        <label asp-for="tenantFullName" class="control-label"></label>
+                                        <input asp-for="tenantFullName" class="form-control" />
+                                        <span asp-validation-for="tenantFullName" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label asp-for="tenantMobile" class="control-label"></label>
+                                        <input asp-for="tenantMobile" class="form-control" />
+                                        <span asp-validation-for="tenantMobile" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label asp-for="tenantPancard" class="control-label"></label>
+                                        <input  name="tenantPancard" type="text"  class="form-control" />
+                                        <span asp-validation-for="tenantPancard" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label asp-for="tenantAadharCard" class="control-label"></label>
+                                        <input  name="tenantAadharCard" type="text"   class="form-control" />
+                                        <span asp-validation-for="tenantAadharCard" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <input type="submit" value="Upload" class="btn btn-primary btn-block mt-4" />
+
+                            </form>
+                        </div>
+                    </div>
+                   
+                </div>
+
+
+            </div>
+
+            
+        </div>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#add_row").on("click", function () {
+            // Dynamic Rows Code
+
+            // Get max row id and set new id
+            var newid = 0;
+            $.each($("#tab_logic tr"), function () {
+                if (parseInt($(this).data("id")) > newid) {
+                    newid = parseInt($(this).data("id"));
+                }
+            });
+            newid++;
+
+            var tr = $("<tr></tr>", {
+                id: "addr" + newid,
+                "data-id": newid
+            });
+
+            // loop through each td and create new elements with name of newid
+            $.each($("#tab_logic tbody tr:nth(0) td"), function () {
+                var td;
+                var cur_td = $(this);
+
+                var children = cur_td.children();
+
+                // add new td and element if it has a nane
+                if ($(this).data("name") !== undefined) {
+                    td = $("<td></td>", {
+                        "data-name": $(cur_td).data("name")
+                    });
+
+                    var c = $(cur_td).find($(children[0]).prop('tagName')).clone().val("");
+                    c.attr("name", $(cur_td).data("name") + newid);
+                    c.appendTo($(td));
+                    td.appendTo($(tr));
+                } else {
+                    td = $("<td></td>", {
+                        'text': $('#tab_logic tr').length
+                    }).appendTo($(tr));
+                }
+            });
+
+            // add delete button and td
+            /*
+            $("<td></td>").append(
+                $("<button class='btn btn-danger glyphicon glyphicon-remove row-remove'></button>")
+                    .click(function() {
+                        $(this).closest("tr").remove();
+                    })
+            ).appendTo($(tr));
+            */
+
+            // add the new row
+            $(tr).appendTo($('#tab_logic'));
+
+            $(tr).find("td button.row-remove").on("click", function () {
+                $(this).closest("tr").remove();
+            });
+        });
+
+
+
+
+        // Sortable Code
+        var fixHelperModified = function (e, tr) {
+            var $originals = tr.children();
+            var $helper = tr.clone();
+
+            $helper.children().each(function (index) {
+                $(this).width($originals.eq(index).width())
+            });
+
+            return $helper;
+        };
+
+        $(".table-sortable tbody").sortable({
+            helper: fixHelperModified
+        }).disableSelection();
+
+        $(".table-sortable thead").disableSelection();
+
+
+
+        $("#add_row").trigger("click");
+    });
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+
+
+}
+

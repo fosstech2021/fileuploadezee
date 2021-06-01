@@ -1,0 +1,170 @@
+﻿@model BasePackageModule1.ViewModels.NavViewModel
+@using System.Text.Encodings.Web
+@using Microsoft.AspNetCore.Http
+@using BasePackageModule1.TagHelpers
+@using BasePackageModule1.Utility
+@inject IHttpContextAccessor HttpContextAccessor
+
+
+<style>
+    @@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{   }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
+</style>
+<!-- Main Header -->
+<!--<header class="main-header header-style-one">-->
+
+    <!-- Header Upper -->
+    <!--<div class="header-upper">
+        <div class="inner-container clearfix">-->
+            <!--Logo-->
+            <!--<a asp-action="Index" asp-controller="Home" title="Linoor - DIgital Agency HTML Template">
+                <img src='@Model.Logo.HeaderLogo' style="margin-top:16px;"
+                     alt="Ezee Agreement - Complete home agreement solution"
+                     title="Ezee Agreement - Complete home agreement solution">
+            </a>
+            <div class="nav-outer clearfix">-->
+                <!--Mobile N    avigation Toggler-->
+                <!--<div class="mobile-nav-toggler">
+                    <span class="icon flaticon-menu-2"></span><span class="txt">Menu</span>
+                </div>-->
+
+                <!-- Main Menu -->
+                <!--<nav class="main-menu navbar-expand-md navbar-light" style="background-color:white !important">
+                    <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                        <ul class="navigation clearfix">
+                            @foreach (var menu in Model.Menus)
+                            {
+                                if (menu.Type == "productCollection")
+                                {
+                                    <li class="dropdown">
+                                        <a asp-action="Index" asp-controller="Products" style="color:black !important">@menu.Name</a>
+                                        <ul>
+                                            @foreach (var menuProducts in menu.MenuProducts)
+                                            {
+                                                <li><a asp-controller="Products" style="color:black !important" asp-action="Details" asp-route-id="@menuProducts.Product.Id">@menuProducts.Product.Name</a></li>
+                                            }
+                                        </ul>
+                                    </li>
+
+                                }
+                                if (menu.Type == "interLink" || menu.Type == null)
+                                {
+                                    <li><a href="@menu.Url" style="color:black !important"> @menu.Name </a></li>
+                                }
+                            }
+
+                            @Html.Partial("_LoginPartial")
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="other-links clearfix">
+                <div class="link-box">
+                    <div class="call-us">
+                        <a class="link" style="color:black !important" href="tel:@Model.BusinessProfile.DisplayContact1">
+                            <span class="icon"></span>
+                            <span class="sub-text" style="color:black !important">Call Anytime</span>
+                            <span class="number" style="color:black !important">@Model.BusinessProfile.DisplayContact1</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>-->
+    <!--End Header Upper-->
+    <!--Mobile Menu-->
+    <!-- /.side-menu__block -->
+
+<!--</header>-->
+<!-- End Main Header -->
+
+<!--<div class="side-menu__block">
+
+
+    <div class="side-menu__block-overlay custom-cursor__overlay">
+        <div class="cursor"></div>
+        <div class="cursor-follower"></div>
+    </div>--><!-- /.side-menu__block-overlay -->
+    <!--<div class="side-menu__block-inner ">
+        <div class="side-menu__top justify-content-end">
+
+            <a href="#" class="side-menu__toggler side-menu__close-btn">
+                <img src="images/icons/close-1-1.png"
+                     alt="">
+            </a>
+        </div>--><!-- /.side-menu__top -->
+
+
+        <!--<nav class="mobile-nav__container">-->
+            <!-- content is loading via js -->
+        <!--</nav>
+        <div class="side-menu__sep"></div>--><!-- /.side-menu__sep -->
+        <!--<div class="side-menu__content">
+            <p>
+                
+            </p>
+            <p>
+                <a href="mailto:@Model.BusinessProfile.EmailAddress">needhelp@linoor.com</a> <br> <a href="tel:@Model.BusinessProfile.DisplayContact1">
+                    @Model.BusinessProfile.DisplayContact1
+                </a>
+            </p>
+            <div class="side-menu__social">
+                <a href="@Model.BusinessProfile.FacebookPageURL"><i class="fab fa-facebook-square"></i></a>
+                <a href="@Model.BusinessProfile.TwitterURL"><i class="fab fa-twitter"></i></a>
+                <a href="@Model.BusinessProfile.InstagramPageURL"><i class="fab fa-instagram"></i></a>
+               
+            </div>
+        </div>--><!-- /.side-menu__content -->
+    <!--</div>--><!-- /.side-menu__block-inner -->
+<!--</div>-->
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-light border-bottom" style="background-color:white;">
+    <a class="navbar-brand" href="#"><img src="@Model.Logo.HeaderLogo" style="height:50px !important; margin-left:50px;"  /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto ml-auto">
+            @foreach (var menu in Model.Menus)
+            {
+                if (menu.Type == "productCollection")
+                {
+                    <li class="dropdown">
+                        <a asp-action="Index" asp-controller="Products" style="color:black !important">@menu.Name</a>
+                        <ul>
+                            @foreach (var menuProducts in menu.MenuProducts)
+                            {
+                                <li class="nav-item text-center">
+                                    <a asp-controller="Products" class="nav-link text-center" style="        font-size: 25px;
+        color: black !important;
+        font-family: var(--thm-font);" asp-action="Details" asp-route-id="@menuProducts.Product.Id">@menuProducts.Product.Name</a>
+        </li>
+    }
+                        </ul>
+                    </li>
+
+                }
+                if (menu.Type == "interLink" || menu.Type == null)
+                {
+                    <li class="nav-item">
+                        <a href="@menu.Url" class="nav-link text-center" style="font-size:25px;color: black !important;
+        font-family: var(--thm-font);
+"> @menu.Name </a>
+        </li>
+    }
+
+
+}
+           
+
+        </ul>
+        @Html.Partial("_LoginPartial")
+    </div>
+</nav>

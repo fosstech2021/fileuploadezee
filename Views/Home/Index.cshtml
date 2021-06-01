@@ -1,0 +1,631 @@
+﻿@model BasePackageModule1.ViewModels.HomeViewModel
+@{
+    ViewBag.Title = "Home";
+}
+
+
+
+<!-- Banner Section -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+
+        @foreach (var item in Model.SliderImages)
+        {
+            if (Model.SliderImages.First().Id == item.Id)
+            {
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="@item.Image" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h2 class="text-white" style="background-color: rgba(107, 98, 96, 0.5); ">@item.Heading</h2>
+                <div class="wrapper-button mt-4">
+                    <a href="/Agreements/UploadDocument" class="btn btn-primary float-left" style="  border:none;  padding:12px;    border-radius: 0px;
+        background-color: #d35400 !important;">Create Agreement</a>
+                    <a href="tel:+917304053445" class="btn btn-primary float-right" style="        padding: 12px;
+        border: none;
+        border-radius: 0px;
+        background-color: #d35400 !important;">Request Call Back</a>
+                </div>
+           
+            </div>
+        </div>
+            }
+            else
+            {
+    <div class="carousel-item">
+        <img class="d-block w-100" src="@item.Image" alt="Second slide">
+        <div class="carousel-caption d-none d-md-block">
+            <h2 class="text-center" style="background-color: rgba(107, 98, 96, 0.5); ">@item.Heading</h2>
+            <div class="wrapper-button mt-4">
+                <a class="btn btn-primary float-left" style="  border:none;  padding:12px;    border-radius: 0px;
+        background-color: #d35400 !important;">Create Agreement</a>
+                <a class="btn btn-primary float-right" style="        padding: 12px;
+        border: none;
+        border-radius: 0px;
+        background-color: #d35400 !important;">Request Call Back</a>
+            </div>
+
+        </div>
+    </div>
+            }
+        }
+
+
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<section class="how-it-works">
+    <div class="container-fluid">
+
+        <div class="row mt-3">
+            <div class="col-12">
+                <h3 class="text-center">
+                    HOW IT WORKS?
+                </h3>
+                <p class="text-center" style="margin-top: -2.6rem; font-family: var(--thm-font); font-size: 22px;">Steps Involved in registering Leave & License</p>
+            </div>
+        </div>
+        <div class="row mt-1 mb-4">
+            <div class="col-md-3 col-sm-12">
+                <div class="card mt-2" style="        max-height: 546px;
+        min-height: 546px;
+" >
+                    <p class="text-center p-4"> <img src="~/icon/1.png" class="img-circle img-fluid" style="height:150px;width:150px; " /></p>
+                    
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Book Appointment</h5>
+                        <p class="text-justify" style="line-height: 23px;">For this hassale free process, just call us or book appointment on our website for door -step visit for time saving forward adhar and pan of both parties on whatsapp or website</p>
+                        <p class="text-center"><a asp-area="Identity" asp-action="Register" asp-controller="Account" class="btn btn-primary text-center" style="        background: #e67e22; border:0px;
+">Book Now</a></p>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <div class="card mt-4" style="        max-height: 546px;
+        min-height: 546px;
+">
+                    <p class="text-center p-4"> <img src="~/icon/4.png" class="img-circle img-fluid" style="height:150px;width:150px; " /></p>
+
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Executive Visit</h5>
+                        <p class="text-justify" style="line-height: 23px;">
+                            We will Prepare a Draft Agreement with your given information and send our executive to the preferred location at an allotted time for the biometric process.
+                        </p>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <div class="card mt-4" style="        max-height: 546px;
+        min-height: 546px;
+">
+                    <p class="text-center p-4"> <img src="~/icon/5.png" class="img-circle img-fluid" style="height:150px;width:150px; " /></p>
+
+                    <div class="card-body">
+                        <h5 class="card-title text-center" style="min-width: 271px;">Govt. Fees Payment & Approval </h5>
+                        <p class="text-justify" style="line-height: 23px;">Once the Process of  Biometric and Aadhar Authentication is completed we make payment of stamp duty and registration fees and forward the draft to the sub-registrar office for registration. </p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <div class="card mt-4" style="        max-height: 546px;
+        min-height: 546px;
+">
+                    <p class="text-center p-4"> <img src="~/icon/2.png" class="img-circle img-fluid" style="height:150px;width:150px; " /></p>
+
+                    <div class="card-body">
+                        <h5 class="card-title">Delivery of Document</h5>
+                        <p class="text-justify" style="line-height: 23px;">After Successful Registration from the  Sub-Registrar office with print the registred documents and deliver it to you, or you can download from our website.</p>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--About Section-->
+<section class="about-section">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <!--Image Column-->
+            <div class="image-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                <div class="inner">
+                    <div class="image-block wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
+                        <img src="~/theme/images/resource/featured-image-1.jpg" alt="">
+
+                    </div>
+                    <div class="image-block wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 300ms; animation-name: fadeInUp;">
+                        <img src="~/theme/images/resource/featured-image-2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!--Text Column-->
+            <div class="text-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                <div class="inner">
+                    <div class="sec-title">
+                        <h2 style="font-family: var(--thm-font);">Who we are</h2>
+                        <div class="lower-text" style="font-family: var(--thm-font);">
+                            Ezee Agreement - Complete Home Agreement Solution
+
+                        </div>
+                    </div>
+                    <div class="text">
+                        <p style="font-family: var(--thm-font); font-size:21px;line-height:1.6;">
+                            Ezee Agreement is a government approved doorstep authorised service provider. We combine technology, Government’s latest E-initiatives & doorstep service to give a hassle-free experience. We make regular compliance like rental agreement registration extremely easy and convenient. What’s really great is that you get these quallity services at your doorstep at low and transparent charges!
+                        </p>
+                    </div>
+
+                    <div class="link-box">
+                        <a class="theme-btn btn-style-one" href="/AboutUs/Index">
+                            <i class="btn-curve"></i>
+                            <span class="btn-title">Discover More</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--End Banner Section -->
+<!--Enquiry Form-->
+<section class="form-inquiry">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card mt-4 mb-4">
+                    <div class="form-wraaper p-4">
+                        <div class="card-header text-center" style="font-family: var(--thm-font);">
+                            ENQUIRE NOW
+                        </div>
+                        <form action="#">
+                            <input type="text" class="form-control mt-2" placeholder="Enter Your Name" />
+                            <input type="email" class="form-control mt-2" placeholder="Enter Your Email" />
+                            <input type="number" class="form-control mt-2" placeholder="Enter Your Phone " />
+                            <textarea class="form-control mt-2" id="mesaage" style="font-family: var(--thm-font);" placeholder="Enter Youir Message" rows="3"></textarea>
+
+
+                            <button type="submit" class="theme-btn btn-style-one btn-block mt-3">submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end Enquiry Form-->
+<!--Services Section-->
+<section class="services-section">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <!--Title Block-->
+            <div class="title-block col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                <div class="inner">
+                    <div class="sec-title">
+                        <h2>We Shape the Perfect <br>Solutions<span class="dot">.</span></h2>
+                        <div class="lower-text">
+                            We are committed to providing our customers with exceptional
+                            service.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @foreach (var service in Model._items)
+            {
+                <!--Service Block-->
+                <div class="service-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="0ms"
+                     data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <div class="bottom-curve"></div>
+                        <div class="icon-box"><span class="flaticon-responsive"></span></div>
+                        <h6><a asp-action="Details" asp-controller="Products" asp-route-id="@service.Id">@service.Name </a></h6>
+                    </div>
+                </div>
+                <!--Service Block-->
+            }
+
+            <!--<div class="service-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInLeft"
+                 data-wow-delay="300ms" data-wow-duration="1500ms">
+                <div class="inner-box">
+                    <div class="bottom-curve"></div>
+                    <div class="icon-box"><span class="flaticon-computer"></span></div>
+                    <h6><a href="graphic-designing.html">graphic <br>designing</a></h6>
+                </div>
+            </div>-->
+            <!--Service Block-->
+            <!--<div class="service-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="0ms"
+                 data-wow-duration="1500ms">
+                <div class="inner-box">
+                    <div class="bottom-curve"></div>
+                    <div class="icon-box"><span class="flaticon-digital-marketing"></span></div>
+                    <h6><a href="digital-marketing.html">digital <br>marketing</a></h6>
+                </div>
+            </div>-->
+            <!--Service Block-->
+            <!--<div class="service-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInLeft"
+                 data-wow-delay="300ms" data-wow-duration="1500ms">
+                <div class="inner-box">
+                    <div class="bottom-curve"></div>
+                    <div class="icon-box"><span class="flaticon-development"></span></div>
+                    <h6><a href="seo.html">seo & content <br>writing</a></h6>
+                </div>
+            </div>-->
+            <!--Service Block-->
+            <!--<div class="service-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInLeft"
+                 data-wow-delay="600ms" data-wow-duration="1500ms">
+                <div class="inner-box">
+                    <div class="bottom-curve"></div>
+                    <div class="icon-box"><span class="flaticon-app-development"></span></div>
+                    <h6><a href="app-development.html">App <br>Development</a></h6>
+                </div>
+            </div>-->
+            <!--Service Block-->
+            <!--<div class="service-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInLeft"
+                 data-wow-delay="900ms" data-wow-duration="1500ms">
+                <div class="inner-box">
+                    <div class="bottom-curve"></div>
+                    <div class="icon-box"><span class="flaticon-ui"></span></div>
+                    <h6><a href="ui-designing.html">Ui/UX <br>designing</a></h6>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</section>
+
+
+
+<hr />
+
+<section class="stamp-duty-calculator">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="text-center">
+                    STAMP DUTY CALCULATION FOR LEAVE & LICENSE AGREEMENT REGISTRATION
+
+                </h4>
+                <p class="text-center" style="        margin-top: -1rem;
+        font-family: var(--thm-font); font-size:21px;"> YOU CAN CALCULATE THE TENTATIVE COST OF RENT AGREEMENT REGISTRATION HERE</p>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card mt-4 mb-4">
+                    <form class="p-4" onsubmit="return false">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <label for="month">
+                                    NUMBER OF MONTHS*
+                                </label>
+                                <input type="number" class="form-control" placeholder="Maximum 60" id="nmonth">
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <label for="rent">
+                                    MONTHLY RENT*
+                                </label>
+                                <input type="number" class="form-control" placeholder="MONTHLY RENT" id="rent">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 mt-3">
+
+                                <label for="deposit">
+                                    REFUNDABLE SECURITY DEPOSIT*
+                                </label>
+                                <input type="number" class="form-control" placeholder="REFUNDABLE SECURITY DEPOSIT" id="deposit">
+
+
+                            </div>
+                            <div class="col-sm-12 col-md-6 mt-3">
+                                <label for="refundable">
+                                    NON REFUNDABLE SECURITY DEPOSIT*
+                                </label>
+                                <input type="number" class="form-control" placeholder="NON REFUNDABLE SECURITY DEPOSIT" id="nondeposit">
+                            </div>
+                        </div>
+                        @*<div class="row">
+                            <div class="col-sm-12">
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="fixed" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Fixed</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="nonfixed" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">Incremental</label>
+                                </div>
+
+                            </div>
+
+
+                        </div>*@
+                        
+
+                        <button type="button" onclick="stampduty()" class="theme-btn btn-style-one btn-block mt-3">Calculate</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card p-4">
+                    <table>
+                        <tr>
+                            <th>
+                                STAMP DUTY:
+                            </th>
+                            <td><input type="number" name="stampDutyCharge" id="stampDutyCharge" class="form-control input-sm mb-3" disabled="true"></td>
+                        </tr>
+                        <tr>
+                            <th>
+                                REGISTRATION FEE:
+                            </th>
+                            <td><input type="number" name="stampDutyCharge" id="registrationfee" class="form-control input-sm mb-3" disabled="true"></td>
+                        </tr>
+                        <tr>
+                            <th>
+                                E-REGISTRATION SERVICE FEE:
+                            </th>
+                            <td><input type="number" name="stampDutyCharge" id="servicechargefee" class="form-control input-sm mb-3" disabled="true"></td>
+                        </tr>
+                        <tr>
+                            <th>Total:</th>
+                            <td id="totalcharge" class="h3"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="ready-for-quick" style="background-color:yellow;">
+    <div class="container ml-auto mr-auto">
+        <div class="row pt-4 pb-4">
+
+            <div class="col-md-6 col-sm-12 d-none d-lg-block">
+                <p class="text-center mr-3" style="margin-top:19px;         "> <span class="toolbox mr-4" style="font-size:30px;"><i class="fas fa-toolbox"></i></span>READY FOR QUICK & HASSLE-FREE REGISTRATION?</p>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <p class="text-center"><button style="font-size:25px;margin-top:19px;" class="btn btn-outline-info">ONLY @@ INR 999/-</button></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Live Section-->
+@*<section class="live-section">
+        <div class="auto-container">
+            <div class="sec-title centered">
+                <h2>Experience us live<span class="dot">.</span></h2>
+            </div>
+            <div class="main-image-box">
+                <div class="image-layer" style="background-image: url(images/resource/featured-image-3.jpg);"></div>
+                <div class="inner clearfix">
+                    <div class="round-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="round-inner">
+                            <div class="vid-link">
+                                <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="lightbox-image">
+                                    <div class="icon">
+                                        <span class="flaticon-play-button-1"></span><i class="ripple"></i>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="title">
+                                <h3>agency that gets <br>excited about</h3>
+                            </div>
+                            <div class="more-link"><a href="about.html">Read More</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>*@
+
+
+
+
+
+<!-- Gallery Section -->
+<section class="gallery-section">
+    <div class="auto-container">
+        <!--MixitUp Galery-->
+        <div class="mixitup-gallery">
+            <div class="upper-row clearfix">
+                <div class="sec-title">
+                    <h2>work showcase<span class="dot">.</span></h2>
+                </div>
+                <!--Filter-->
+                <div class="filters clearfix">
+                    <ul class="filter-tabs filter-btns clearfix">
+                        <li class="active filter" data-role="button" data-filter="all">All</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="filter-list row">
+
+                @foreach (var item in Model._Image)
+                {
+                    <!-- Gallery Item -->
+                    <div class="gallery-item mix all web-design col-lg-4 col-md-6 col-sm-12">
+                        <div class="inner-box">
+                            <figure class="image"><img src="@item.Img" alt=""></figure>
+                            <a href="@item.Img" class="lightbox-image overlay-box"
+                               data-fancybox="gallery"></a>
+
+                        </div>
+                    </div>
+                }
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="faq">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <ul class="accordion-box clearfix">
+
+                    @foreach (var faq in Model._faq)
+                    {
+                        @if (Model._faq.First().Id == faq.Id)
+                        {
+                            <li class="accordion block active-block">
+                                <div class="acc-btn active ">
+                                    <span class="count"></span> @faq.Question
+                                </div>
+                                <div class="acc-content current">
+                                    <div class="content">
+                                        <div class="text">
+                                            @faq.Answere
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="accordion block">
+                                <div class="acc-btn ">
+                                    <span class="count"></span> @faq.Question
+                                </div>
+                                <div class="acc-content ">
+                                    <div class="content">
+                                        <div class="text">
+                                            @faq.Answere
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+
+                    }
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- News Section -->
+<section class="news-section">
+    <div class="auto-container">
+        <div class="sec-title centered">
+            <h2>Latest news & articles<span class="dot">.</span></h2>
+        </div>
+
+        <div class="row clearfix">
+
+            @foreach (var blog in Model.Updates)
+            {
+                <!--News Block-->
+                <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0ms"
+                     data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <a href="blog-single.html"><img src="@blog.Image" alt=""></a>
+                        </div>
+                        <div class="lower-box">
+                            <div class="post-meta">
+                                <ul class="clearfix">
+                                    <li><span class="far fa-clock"></span>@blog.CreatedAt.ToLongDateString()</li>
+
+                                </ul>
+                            </div>
+                            <h5><a asp-action="Details" asp-controller="Blog" asp-route-id="@blog.Id">@blog.Title</a></h5>
+
+
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+</section>
+
+<script>
+    function stampduty(e) {
+       
+        var rent, month, deposit, annualrent, stampduty = 0, stampDutyCharge, TOTAL;
+        var efees;
+        var servicecharge;
+        var totalscharge;
+        
+       
+    
+   
+   
+   
+        month = Number(document.getElementById("nmonth").value);
+   
+   
+        rent = Number(document.getElementById("rent").value);
+        
+     
+        deposit = Number(document.getElementById("deposit").value);
+       
+       
+
+        const onemonthvalue = deposit / 12;
+        const actualdeposit = (onemonthvalue * month);
+        const tenper = actualdeposit * 10 / 100;
+      
+
+        annualrent = ((rent * month));
+      
+        stampduty = (annualrent + tenper) * 0.25 / 100;
+        stampDutyCharge = stampduty;
+     
+       
+
+        stampDutyCharge = document.getElementById("stampDutyCharge").value = parseFloat(stampDutyCharge).toFixed(2);
+        
+        efees = document.getElementById("registrationfee").value = 1000;
+        
+        servicecharge = document.getElementById("servicechargefee").value = 999;
+
+        
+        console.log(parseFloat(stampduty).toFixed(2));
+      
+        TOTAL = stampduty + efees + servicecharge;
+       
+        console.log(parseFloat(TOTAL).toFixed(2))
+        totalscharge = document.getElementById("totalcharge").innerText = parseFloat(TOTAL).toFixed(2);
+        e.preventDefault();
+    }
+</script>

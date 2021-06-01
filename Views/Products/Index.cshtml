@@ -1,0 +1,55 @@
+﻿@model X.PagedList.IPagedList<BasePackageModule1.Models.Product>
+@using X.PagedList.Mvc.Core
+
+<!-- Banner Section -->
+<section class="page-banner">
+    <div class="image-layer" style="background-image:url(images/background/image-7.jpg);"></div>
+    <div class="shape-1"></div>
+    <div class="shape-2"></div>
+    <div class="banner-inner">
+        <div class="auto-container">
+            <div class="inner-container clearfix">
+                <h1>Services</h1>
+                <div class="page-nav">
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="index-main.html">Home</a></li>
+                        <li class="active">Services</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Banner Section -->
+<!--Services Section-->
+<section class="services-section-three padd-top">
+    <div class="auto-container">
+        <div class="services">
+            <div class="row clearfix">
+
+                @foreach (var service in Model)
+                {
+                <div class="service-block-two col-xl-12 col-lg-12 col-md-12 col-sm-12 wow fadeInUp mt-4 mb-4"
+                     data-wow-delay="0ms" data-wow-duration="1500ms">
+                    
+
+                    <div class="card">
+                        <p class="text-center"> <img class="card-img-top" src="@service.Image" style="height:300px;width:500px;" alt="Card image cap"></p>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">@service.Name</h5>
+                            
+                            <p class="text-center">
+                                @Html.Raw(service.Description)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                }
+               
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Services Section-->

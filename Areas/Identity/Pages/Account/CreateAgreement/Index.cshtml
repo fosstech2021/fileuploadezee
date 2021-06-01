@@ -1,0 +1,335 @@
+﻿@page
+@using BasePackageModule1.Areas.Identity.Pages.Account.Manage
+@model BasePackageModule1.Areas.Identity.Pages.Account.CreateAgreement.IndexModel
+
+@{ Layout = "~/Areas/Identity/Pages/Account/Manage/_Layout.cshtml"; }
+
+<h2>Create Agreements</h2>
+<hr>
+<div class="row">
+    <div class="col-md-12 col-lg-8 col-sm-12 ml-auto mr-auto">
+
+        <form method="post" enctype="multipart/form-data">
+            <h6>1. Property Details</h6>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <input type="text" asp-for="AgreementDetailsFileData.PropertyDetails" class="form-control" name="AgreementDetailsFileData.PropertyDetails" placeholder="Unit No. & Building Name" id="PropertyDetails">
+                    <span asp-validation-for="AgreementDetailsFileData.PropertyDetails" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <input type="text" asp-for="AgreementDetailsFileData.Location" class="form-control" name="AgreementDetailsFileData.Location" placeholder="Road, Locality and Land Mark" id="AgreementDetailsFileData.PropertyDetails">
+                    <span asp-validation-for="AgreementDetailsFileData.Location" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="PropertyType">Property Type</label>
+                    <span asp-validation-for="AgreementDetailsFileData.PropertyType" class="text-danger"></span>
+                    <select id="PropertyType" class="form-control" asp-for="AgreementDetailsFileData.PropertyType" name="AgreementDetailsFileData.PropertyType">
+                        <option selected>Choose...</option>
+                        <option value="1">Value 1 </option>
+                        <option value="2">Value 2 </option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="PropertyUse">Property Use</label>
+                    <span asp-validation-for="AgreementDetailsFileData.PropertyUse" class="text-danger"></span>
+                    <select id="PropertyUse" class="form-control" asp-for="AgreementDetailsFileData.PropertyUse" name="AgreementDetailsFileData.PropertyUse">
+                        <option selected>Choose...</option>
+                        <option value="1">Value 1 </option>
+                        <option value="2">Value 2 </option>
+                    </select>
+                </div>
+            </div>
+            <h6>2. Owner/Licensor Details</h6>
+            <hr />
+
+
+            @*######################## Owner Data #################*@
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#OwnerModal">
+                        File Details
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="OwnerModal" tabindex="-1" aria-labelledby="OwnerModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-center ml-auto" id="OwnerModalLabel">File Details</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-row">
+
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> First Name</label>
+                                            <input type="text" class="form-control" asp-for="AgreementDetailsFileData.OwnerFirstName" name="AgreementDetailsFileData.OwnerFirstName" placeholder="First Name">
+                                            <span asp-validation-for="AgreementDetailsFileData.OwnerFirstName" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> Middle Name</label>
+                                            <input type="text" class="form-control" asp-for="AgreementDetailsFileData.OwnerMiddleName" name="AgreementDetailsFileData.OwnerMiddleName" placeholder="Middle Name">
+                                            <span asp-validation-for="AgreementDetailsFileData.OwnerMiddleName" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> Last Name</label>
+                                            <input type="text" class="form-control" asp-for="AgreementDetailsFileData.OwnerLastName" name="AgreementDetailsFileData.OwnerLastName" placeholder="Last name">
+                                            <span asp-validation-for="AgreementDetailsFileData.OwnerLastName" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> Salutation</label>
+                                            <select id="inputState" class="form-control" asp-for="AgreementDetailsFileData.OwnerSalutation" name="AgreementDetailsFileData.OwnerSalutation">
+                                                <option selected>Choose...</option>
+                                                <option>Mr.</option>
+                                                <option>Miss.</option>
+                                                <option>Mrs.</option>
+                                            </select>
+                                            <span asp-validation-for="AgreementDetailsFileData.OwnerSalutation" class="text-danger"></span>
+                                        </div>
+
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> Age</label>
+                                            <input type="number" class="form-control" placeholder="Age" asp-for="AgreementDetailsFileData.OwnerAge" name="AgreementDetailsFileData.OwnerAge">
+                                            <span asp-validation-for="AgreementDetailsFileData.OwnerAge" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> PAN</label>
+                                            <input type="number" class="form-control" placeholder="PAN" asp-for="AgreementDetailsFileData.OwnerPan" name="AgreementDetailsFileData.OwnerPan">
+                                            <span asp-validation-for="AgreementDetailsFileData.OwnerPan" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <div class="form-group">
+                                                <label for="exampleFormControlTextarea1">Address</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" asp-for="AgreementDetailsFileData.OwnerAddress" name="AgreementDetailsFileData.OwnerAddress"></textarea>
+                                                <span asp-validation-for="AgreementDetailsFileData.OwnerAddress" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#OwnerModal2">
+                        Upload Doucuments
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="OwnerModal2" tabindex="-1" aria-labelledby="OwnerModalLabel2" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-center ml-auto" id="OwnerModalLabel2">Upload Doucuments</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-row">
+
+                                        <div class="form-group col-md-6">
+                                            <label for="exampleFormControlFile1">
+                                                PAN
+                                            </label>
+                                            <input type="file" class="form-control-file" id="exampleFormControlFile1" asp-for="AgreementDetailsFileData.OwnerPanCardFile" name="AgreementDetailsFileData.OwnerPanCardFile">
+                                            <span asp-validation-for="AgreementDetailsFileData.OwnerPanCardFile" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="exampleFormControlFile1">Aadhar</label>
+                                            <input type="file" class="form-control-file" id="exampleFormControlFile1" asp-for="AgreementDetailsFileData.OwnerAdharCardFile" name="AgreementDetailsFileData.OwnerAdharCardFile">
+                                            <span asp-validation-for="AgreementDetailsFileData.OwnerAdharCardFile" class="text-danger"></span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*######################## Owner Data #################*@
+            <h6>4. Tenant/Licensee Details</h6>
+            <hr />
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        File Details
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-center" id="exampleModalLabel">File Details</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-row">
+
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> First Name</label>
+                                            <input type="text" class="form-control" placeholder="First Name" asp-for="AgreementDetailsFileData.TenantFirstName" name="AgreementDetailsFileData.TenantFirstName">
+                                            <span asp-validation-for="AgreementDetailsFileData.TenantFirstName" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> Middle Name</label>
+                                            <input type="text" class="form-control" placeholder="Middle Name" asp-for="AgreementDetailsFileData.TenantMiddleName" name="AgreementDetailsFileData.TenantMiddleName">
+                                            <span asp-validation-for="AgreementDetailsFileData.TenantMiddleName" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> Last Name</label>
+                                            <input type="text" class="form-control" placeholder="Last name" asp-for="AgreementDetailsFileData.TenantLastName" name="AgreementDetailsFileData.TenantLastName">
+                                            <span asp-validation-for="AgreementDetailsFileData.TenantLastName" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> Salutation</label>
+                                            <select id="inputState" class="form-control" asp-for="AgreementDetailsFileData.TenantSalutation" name="AgreementDetailsFileData.TenantSalutation">
+                                                <option selected>Choose...</option>
+                                                <option>Mr.</option>
+                                                <option>Miss.</option>
+                                                <option>Mrs.</option>
+                                            </select>
+                                            <span asp-validation-for="AgreementDetailsFileData.TenantSalutation" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> Age</label>
+                                            <input type="number" class="form-control" placeholder="Age" asp-for="AgreementDetailsFileData.TenantAge" name="AgreementDetailsFileData.TenantAge">
+                                            <span asp-validation-for="AgreementDetailsFileData.TenantAge" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState"> PAN</label>
+                                            <input type="number" class="form-control" placeholder="PAN" asp-for="AgreementDetailsFileData.TenantPan" name="AgreementDetailsFileData.TenantPan">
+                                            <span asp-validation-for="AgreementDetailsFileData.TenantPan" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <div class="form-group">
+                                                <label for="exampleFormControlTextarea1">Address</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" asp-for="AgreementDetailsFileData.TenantAddress" name="AgreementDetailsFileData.TenantAddress"></textarea>
+                                                <span asp-validation-for="AgreementDetailsFileData.TenantAddress" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+                        Upload Doucuments
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-center ml-auto" id="exampleModalLabel">Upload Doucuments</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-row">
+
+                                        <div class="form-group col-md-6">
+                                            <label for="exampleFormControlFile1">
+                                                PAN
+                                            </label>
+                                            <input type="file" class="form-control-file" id="exampleFormControlFile1" asp-for="AgreementDetailsFileData.TenantPanCardFile" name="AgreementDetailsFileData.TenantPanCardFile">
+                                            <span asp-validation-for="AgreementDetailsFileData.TenantPanCardFile" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="exampleFormControlFile1">Aadhar</label>
+                                            <input type="file" class="form-control-file" id="exampleFormControlFile1" asp-for="AgreementDetailsFileData.TenantAdharCardFile" name="AgreementDetailsFileData.TenantAdharCardFile">
+                                            <span asp-validation-for="AgreementDetailsFileData.TenantAdharCardFile" class="text-danger"></span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h6>3. Tenant/Licensee Details</h6>
+            <hr />
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    <label for="exampleFormControlFile1">
+                        Average Rent
+                    </label>
+                    <input type="number" class="form-control-file" id="exampleFormControlFile1" asp-for="AgreementDetailsFileData.AverageRent" name="AgreementDetailsFileData.AverageRent">
+                    <span asp-validation-for="AgreementDetailsFileData.AverageRent" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="exampleFormControlFile1">Security Deposit</label>
+                    <input type="number" class="form-control-file" id="exampleFormControlFile1" asp-for="AgreementDetailsFileData.SecurityDeposit" name="AgreementDetailsFileData.SecurityDeposit">
+                    <span asp-validation-for="AgreementDetailsFileData.SecurityDeposit" class="text-danger"></span>
+                </div>
+
+            </div>
+            <h6>5. Date and Duration</h6>
+            <hr />
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    <label for="exampleFormControlFile1">
+                        No. of Month
+                    </label>
+                    <input type="number" class="form-control-file" id="exampleFormControlFile1" asp-for="AgreementDetailsFileData.Noofmonths" name="AgreementDetailsFileData.Noofmonths">
+                    <span asp-validation-for="AgreementDetailsFileData.Noofmonths" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="exampleFormControlFile1">Start Date</label>
+                    <input type="date" class="form-control-file" id="exampleFormControlFile1" asp-for="AgreementDetailsFileData.StartDate" name="AgreementDetailsFileData.StartDate">
+                    <span asp-validation-for="AgreementDetailsFileData.StartDate" class="text-danger"></span>
+                </div>
+
+            </div>
+            <button type="submit" class="btn btn-block btn-success">Submit</button>
+        </form>
+    </div>
+</div>

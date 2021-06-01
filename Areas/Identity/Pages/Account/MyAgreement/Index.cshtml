@@ -1,0 +1,41 @@
+﻿@page
+@using BasePackageModule1.Areas.Identity.Pages.Account.Manage
+@model BasePackageModule1.Areas.Identity.Pages.Account.MyAgreement.IndexModel
+
+@{
+}
+@{ Layout = "~/Areas/Identity/Pages/Account/Manage/_Layout.cshtml"; }
+<h2>My Agreements</h2>
+<hr>
+    <div class="row">
+
+        @foreach (var item in Model.ArrayAgreementDetails)
+        {
+
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-center">
+                            <i class="fa fa-folder" style="font-size: 100px; color: bisque;"></i>
+                            <br /><b>@item.PropertyDetails</b>
+                            <br /><b>@item.StartDate</b>
+                        </p>
+
+                    </div>
+                    <div class="card-footer text-center">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <form method="post">
+                                <input id="id" name="id" value="@item.Id" type="hidden" />
+                                <button type="button" class="btn btn-success mr-4 rounded">View</button>
+                            </form>
+                                <form method="post">
+                                    <input id="id" name="id" value="@item.Id" type="hidden" />
+                                    <button type="submit" asp-page-handler="DownloadFile" class="btn btn-info ml-4 rounded">Download</button>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>

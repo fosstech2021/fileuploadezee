@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Fosstech India\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Fosstech India\\.nuget\\packages"
+    ]
+  }
+}

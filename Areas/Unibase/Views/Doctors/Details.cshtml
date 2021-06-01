@@ -1,0 +1,25 @@
+﻿@model BasePackageModule1.Models.Doctor
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    @Model.Name
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <h5>Specialities</h5>
+            <p>@Model.Speciality</p>
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

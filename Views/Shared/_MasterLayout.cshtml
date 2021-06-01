@@ -1,0 +1,182 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    @await Component.InvokeAsync("Seo")
+    @RenderSection("MetaTags", required: false)
+    <meta name="robots" content="index,follow" />
+
+
+    
+
+    <!-- CSS here -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Teko:wght@300;400;500;600;700&amp;display=swap"
+          rel="stylesheet">
+    <link href="~/theme/css/bootstrap.css" rel="stylesheet">
+    <link href="~/theme/css/fontawesome-all.css" rel="stylesheet">
+    <link href="~/theme/css/owl.css" rel="stylesheet">
+    <link href="~/theme/css/flaticon.css" rel="stylesheet">
+    <link href="~/theme/css/animate.css" rel="stylesheet">
+    <link href="~/theme/css/jquery-ui.css" rel="stylesheet">
+    <link href="~/theme/css/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="~/theme/css/hover.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/theme/css/jarallax.css">
+    <link href="~/theme/css/custom-animate.css" rel="stylesheet">
+    <link href="~/theme/css/style.css" rel="stylesheet">
+    <!-- rtl css -->
+    <link href="~/theme/css/rtl.css" rel="stylesheet">
+    <!-- Responsive File -->
+    <link href="~/theme/css/responsive.css" rel="stylesheet">
+
+    <!-- Color css -->
+    <link rel="stylesheet" id="jssDefault" href="~/theme/css/colors/color-default.css">
+
+    <link rel="shortcut icon" href="images/favicon.png" id="fav-shortcut" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" id="fav-icon" type="image/x-icon">
+
+    <!-- Responsive Settings -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+    @await Component.InvokeAsync("Navigation")
+
+    <div class="page-wrapper">
+   
+       <section class="page-banner"></section>
+        @RenderBody()
+    </div>
+
+    @* <partial name="_BrandPartial"/> *@
+    @await Component.InvokeAsync("Footer")
+
+
+
+    @if (TempData["_alert.type"] != null)
+    {
+        <script src="~/lib/notify/notify.min.js"></script>
+        <script>
+            $( document ).ready(function() {
+                $.notify('@TempData["_alert.title"]', '@TempData["_alert.type"]');
+            });
+
+        </script>
+    }
+
+
+
+
+
+
+    @RenderSection("Scripts", required: false)
+
+
+
+    @if (TempData["_alert.type"] != null)
+    {
+        <script src="~/lib/notify/notify.min.js"></script>
+
+        <script>
+            $( document ).ready(function() {
+                $.notify('@TempData["_alert.title"]', '@TempData["_alert.type"]');
+            });
+
+        </script>
+    }
+
+    <!-- WhatsHelp.io widget -->
+    @await Component.InvokeAsync("ChatBot")
+    <!-- /WhatsHelp.io widget -->
+    <!-- JS here -->
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/603f9b7a1c1c2a130d647995/1evs7emf0';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <script>document.addEventListener("DOMContentLoaded", function () {
+            // make it as accordion for smaller screens
+            if (window.innerWidth > 992) {
+
+                document.querySelectorAll('.navbar .nav-item').forEach(function (everyitem) {
+
+                    everyitem.addEventListener('mouseover', function (e) {
+
+                        let el_link = this.querySelector('a[data-bs-toggle]');
+
+                        if (el_link != null) {
+                            let nextEl = el_link.nextElementSibling;
+                            el_link.classList.add('show');
+                            nextEl.classList.add('show');
+                        }
+
+                    });
+                    everyitem.addEventListener('mouseleave', function (e) {
+                        let el_link = this.querySelector('a[data-bs-toggle]');
+
+                        if (el_link != null) {
+                            let nextEl = el_link.nextElementSibling;
+                            el_link.classList.remove('show');
+                            nextEl.classList.remove('show');
+                        }
+
+
+                    })
+                });
+
+            }
+            // end if innerWidth
+        });
+// DOMContentLoaded  end
+</script>
+    <script src="~/theme/js/jquery.js"></script>
+    <script src="~/theme/js/popper.min.js"></script>
+    <script src="~/theme/js/bootstrap.min.js"></script>
+    <script src="~/theme/js/TweenMax.js"></script>
+    <script src="~/theme/js/jquery-ui.js"></script>
+    <script src="~/theme/js/jquery.fancybox.js"></script>
+    <script src="~/theme/js/owl.js"></script>
+    <script src="~/theme/js/mixitup.js"></script>
+    <script src="~/theme/js/appear.js"></script>
+    <script src="~/theme/js/wow.js"></script>
+    <script src="~/theme/js/jQuery.style.switcher.min.js"></script>
+    <script type="text/javascript" src="../../cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.2/js.cookie.min.js">
+    </script>
+    <script src="~/theme/js/jquery.easing.min.js"></script>
+    <script src="~/theme/js/jarallax.min.js"></script>
+    <script src="~/theme/js/custom-script.js"></script>
+
+    <script src="~/theme/js/lang.js"></script>
+    <script src="../../translate.google.com/translate_a/elementa0d8.html?cb=googleTranslateElementInit"></script>
+    <script src="~/theme/js/color-switcher.js"></script>
+
+</body>
+</html>
