@@ -30,7 +30,7 @@ namespace BasePackageModule1.Areas.Identity.Pages.Account.ReceivedDocument
                                                 .ThenInclude(a => a.ApplicationUser)
                                                 .Where(a => a.AgreementDetails.ApplicationUser == Userdata).ToListAsync();
         }
-
+         
         public async Task<IActionResult> OnPostDownloadFileAsync(int id)
         {
             var result = _context.ReceivedAgreement.FirstOrDefault(X => X.Id == id);
