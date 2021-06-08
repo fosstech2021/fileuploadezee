@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Project\\FosselProject\\ezeeagreementmobinbhai\\BasePackageModule1.csproj": {}
+    "D:\\FossTechClient\\March-2021\\ezze\\fileuploadezee\\BasePackageModule1.csproj": {}
   },
   "projects": {
-    "E:\\Project\\FosselProject\\ezeeagreementmobinbhai\\BasePackageModule1.csproj": {
+    "D:\\FossTechClient\\March-2021\\ezze\\fileuploadezee\\BasePackageModule1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Project\\FosselProject\\ezeeagreementmobinbhai\\BasePackageModule1.csproj",
+        "projectUniqueName": "D:\\FossTechClient\\March-2021\\ezze\\fileuploadezee\\BasePackageModule1.csproj",
         "projectName": "BasePackageModule1",
-        "projectPath": "E:\\Project\\FosselProject\\ezeeagreementmobinbhai\\BasePackageModule1.csproj",
-        "packagesPath": "C:\\Users\\Lawson\\.nuget\\packages\\",
-        "outputPath": "E:\\Project\\FosselProject\\ezeeagreementmobinbhai\\obj\\",
+        "projectPath": "D:\\FossTechClient\\March-2021\\ezze\\fileuploadezee\\BasePackageModule1.csproj",
+        "packagesPath": "C:\\Users\\Fosstech India\\.nuget\\packages\\",
+        "outputPath": "D:\\FossTechClient\\March-2021\\ezze\\fileuploadezee\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lawson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Fosstech India\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +26,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -38,7 +37,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "MailKit": {
               "target": "Package",
@@ -129,6 +127,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -137,7 +145,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

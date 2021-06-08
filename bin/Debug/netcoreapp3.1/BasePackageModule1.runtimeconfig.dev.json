@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Lawson\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Lawson\\.nuget\\packages"
+      "C:\\Users\\Fosstech India\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Fosstech India\\.nuget\\packages"
     ]
   }
 }
