@@ -16,6 +16,7 @@ namespace BasePackageModule1.Data
        
         public DbSet<AboutUs> AboutUs { get; set; }
 
+        public DbSet<ReceivedAgreement> ReceivedAgreement { get; set; }
         public DbSet<AgreementDetails> AgreementDetails { get; set; }
         
 

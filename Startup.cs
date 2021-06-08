@@ -72,7 +72,8 @@ namespace BasePackageModule1
             //   services.AddSingleton<IEmailSender, EmailSender>();
             services.AddTransient<IEmailService, EmailService>();
             services.AddScoped<ITemplateHelper, TemplateHelper>();
-            
+            services.AddApplicationInsightsTelemetry();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
