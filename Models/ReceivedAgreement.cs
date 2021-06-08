@@ -10,7 +10,7 @@ namespace BasePackageModule1.Models
     public class ReceivedAgreement
     {
         [Key]
-        public int Id { get; set; }
+        public int Id { get; set; } 
         [Required]
         public string DocumentUrl { get; set; }
         [Required]
