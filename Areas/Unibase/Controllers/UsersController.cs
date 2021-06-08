@@ -10,7 +10,7 @@ namespace BasePackageModule1.Areas.Unibase.Controllers
 {
     [Area("Unibase")]
 
-   // [Authorize(Roles = "SuperAdmin,Admin")]
+   [Authorize(Roles = "SuperAdmin,Admin")]
     public class UsersController : Controller
     {
         private readonly ApplicationDbContext _db;
