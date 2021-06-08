@@ -3,6 +3,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using BasePackageModule1.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -36,6 +37,7 @@ namespace BasePackageModule1.Areas.Unibase.Controllers
             {
                 return NotFound();
             }
+
 
             return View(applicationUser);
         }
