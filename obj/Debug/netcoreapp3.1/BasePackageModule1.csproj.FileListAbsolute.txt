@@ -3834,3 +3834,4 @@ E:\Project\FosselProject\ezeeagreementmobinbhai\bin\Debug\netcoreapp3.1\System.D
 E:\Project\FosselProject\ezeeagreementmobinbhai\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
 E:\Project\FosselProject\ezeeagreementmobinbhai\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\ReceivedDocument\Index.cshtml.g.cs
 E:\Project\FosselProject\ezeeagreementmobinbhai\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\ReceivedDocument\_ManageNav.cshtml.g.cs
+E:\Project\FosselProject\ezeeagreementmobinbhai\obj\Debug\netcoreapp3.1\Razor\Areas\Unibase\Views\Users\Details.cshtml.g.cs

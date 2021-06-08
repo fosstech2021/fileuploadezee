@@ -109,8 +109,12 @@ namespace BasePackageModule1.Areas.Identity.Pages.Account.CreateAgreement
 
                 _context.Add(_agreementDetails);
                 await _context.SaveChangesAsync();
-            }
 
+                //return RedirectToAction("UploadDocument", "Agreements");
+              //return   RedirectToPage("./MyAgreement");
+            }
+            //return Page();
         }
+
     }
 }

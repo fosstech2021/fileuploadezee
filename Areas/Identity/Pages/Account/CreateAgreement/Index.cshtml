@@ -28,18 +28,19 @@
                     <label for="PropertyType">Property Type</label>
                     <span asp-validation-for="AgreementDetailsFileData.PropertyType" class="text-danger"></span>
                     <select id="PropertyType" class="form-control" asp-for="AgreementDetailsFileData.PropertyType" name="AgreementDetailsFileData.PropertyType">
-                        <option selected>Choose...</option>
-                        <option value="1">Value 1 </option>
-                        <option value="2">Value 2 </option>
+                        <option value="Apartment/Flat/Room"> Apartment/Flat/Room</option>
+                        <option value="Shop / Gala"> Shop / Gala</option>
+                        <option value="Office"> Office</option>
+                        <option value="Godown"> Godown</option>
+                        <option value="Land+Building/shed"> Land+Building/shed</option>
                     </select>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="PropertyUse">Property Use</label>
                     <span asp-validation-for="AgreementDetailsFileData.PropertyUse" class="text-danger"></span>
                     <select id="PropertyUse" class="form-control" asp-for="AgreementDetailsFileData.PropertyUse" name="AgreementDetailsFileData.PropertyUse">
-                        <option selected>Choose...</option>
-                        <option value="1">Value 1 </option>
-                        <option value="2">Value 2 </option>
+                        <option value="Residential"> Residential</option>
+                        <option value="Non-residential"> Non-residential</option>
                     </select>
                 </div>
             </div>
@@ -89,7 +90,7 @@
                                         <div class="form-group col-md-4">
                                             <label for="inputState"> Salutation</label>
                                             <select id="inputState" class="form-control" asp-for="AgreementDetailsFileData.OwnerSalutation" name="AgreementDetailsFileData.OwnerSalutation">
-                                                <option selected>Choose...</option>
+                                        
                                                 <option>Mr.</option>
                                                 <option>Miss.</option>
                                                 <option>Mrs.</option>
@@ -104,7 +105,7 @@
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="inputState"> PAN</label>
-                                            <input type="number" class="form-control" placeholder="PAN" asp-for="AgreementDetailsFileData.OwnerPan" name="AgreementDetailsFileData.OwnerPan">
+                                            <input type="text" class="form-control" placeholder="PAN" asp-for="AgreementDetailsFileData.OwnerPan" name="AgreementDetailsFileData.OwnerPan">
                                             <span asp-validation-for="AgreementDetailsFileData.OwnerPan" class="text-danger"></span>
                                         </div>
                                     </div>
@@ -120,7 +121,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    @*<button type="button" class="btn btn-primary">Save changes</button>*@
                                 </div>
                             </div>
                         </div>
@@ -162,7 +163,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    @*<button type="button" class="btn btn-primary">Save changes</button>*@
                                 </div>
                             </div>
                         </div>
@@ -214,7 +215,7 @@
                                         <div class="form-group col-md-4">
                                             <label for="inputState"> Salutation</label>
                                             <select id="inputState" class="form-control" asp-for="AgreementDetailsFileData.TenantSalutation" name="AgreementDetailsFileData.TenantSalutation">
-                                                <option selected>Choose...</option>
+                                                
                                                 <option>Mr.</option>
                                                 <option>Miss.</option>
                                                 <option>Mrs.</option>
@@ -228,7 +229,7 @@
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="inputState"> PAN</label>
-                                            <input type="number" class="form-control" placeholder="PAN" asp-for="AgreementDetailsFileData.TenantPan" name="AgreementDetailsFileData.TenantPan">
+                                            <input type="text" class="form-control" placeholder="PAN" asp-for="AgreementDetailsFileData.TenantPan" name="AgreementDetailsFileData.TenantPan">
                                             <span asp-validation-for="AgreementDetailsFileData.TenantPan" class="text-danger"></span>
                                         </div>
                                     </div>
@@ -244,7 +245,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    @*<button type="button" class="btn btn-primary">Save changes</button>*@
                                 </div>
                             </div>
                         </div>
@@ -286,7 +287,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+                                    @*<button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>*@
                                 </div>
                             </div>
                         </div>
