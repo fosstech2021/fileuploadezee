@@ -443,7 +443,6 @@ E:\Project\FosselProject\ezeeagreementmobinbhai\bin\Debug\netcoreapp3.1\runtimes
 E:\Project\FosselProject\ezeeagreementmobinbhai\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 E:\Project\FosselProject\ezeeagreementmobinbhai\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 E:\Project\FosselProject\ezeeagreementmobinbhai\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-E:\Project\FosselProject\ezeeagreementmobinbhai\obj\Debug\netcoreapp3.1\BasePackageModule1.csproj.AssemblyReference.cache
 E:\Project\FosselProject\ezeeagreementmobinbhai\obj\Debug\netcoreapp3.1\BasePackageModule1.AssemblyInfoInputs.cache
 E:\Project\FosselProject\ezeeagreementmobinbhai\obj\Debug\netcoreapp3.1\BasePackageModule1.AssemblyInfo.cs
 E:\Project\FosselProject\ezeeagreementmobinbhai\obj\Debug\netcoreapp3.1\BasePackageModule1.csproj.CoreCompileInputs.cache
@@ -659,3 +658,5 @@ E:\Project\FosselProject\ezeeagreementmobinbhai\obj\Debug\netcoreapp3.1\BasePack
 E:\Project\FosselProject\ezeeagreementmobinbhai\obj\Debug\netcoreapp3.1\BasePackageModule1.dll
 E:\Project\FosselProject\ezeeagreementmobinbhai\obj\Debug\netcoreapp3.1\BasePackageModule1.pdb
 E:\Project\FosselProject\ezeeagreementmobinbhai\obj\Debug\netcoreapp3.1\BasePackageModule1.genruntimeconfig.cache
+E:\Project\FosselProject\ezeeagreementmobinbhai\obj\Debug\netcoreapp3.1\BasePackageModule1.csproj.AssemblyReference.cache
+E:\Project\FosselProject\ezeeagreementmobinbhai\obj\Debug\netcoreapp3.1\Razor\Areas\Unibase\Views\Users\_DetailPopupPartial.cshtml.g.cs

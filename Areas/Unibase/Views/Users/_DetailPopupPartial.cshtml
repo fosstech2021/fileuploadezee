@@ -1,0 +1,200 @@
+﻿@model BasePackageModule1.Models.AgreementDetails
+
+<div class="modal fade " id="OwnerModal" tabindex="-1" aria-labelledby="OwnerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center ml-auto" id="OwnerModalLabel">File Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <input type="text" asp-for="@Model.PropertyDetails" class="form-control"  readonly name="AgreementDetailsFileData.PropertyDetails" placeholder="Unit No. & Building Name" id="PropertyDetails">
+        
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <input type="text" asp-for="@Model.Location" class="form-control" readonly name="AgreementDetailsFileData.Location" placeholder="Road, Locality and Land Mark" id="AgreementDetailsFileData.PropertyDetails">
+                        
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="PropertyType">Property Type</label>
+
+                        <select id="PropertyType" class="form-control"  disabled asp-for="@Model.PropertyType" name="AgreementDetailsFileData.PropertyType">
+                            <option value="Apartment/Flat/Room"> Apartment/Flat/Room</option>
+                            <option value="Shop / Gala"> Shop / Gala</option>
+                            <option value="Office"> Office</option>
+                            <option value="Godown"> Godown</option>
+                            <option value="Land+Building/shed"> Land+Building/shed</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="PropertyUse">Property Use</label>
+                      
+                        <select id="PropertyUse" class="form-control"  disabled asp-for="@Model.PropertyUse" name="AgreementDetailsFileData.PropertyUse">
+                            <option value="Residential"> Residential</option>
+                            <option value="Non-residential"> Non-residential</option>
+                        </select>
+                    </div>
+                </div>
+
+
+
+
+
+
+                Owner Deatils
+                <hr />
+                <div class="form-row">
+
+                    <div class="form-group col-md-4">
+                        <label for="inputState"> First Name</label>
+                        <input type="text" class="form-control" value="@Model.OwnerFirstName" readonly placeholder="First Name">
+
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState"> Middle Name</label>
+                        <input type="text" class="form-control" value="@Model.OwnerMiddleName" readonly placeholder="Middle Name">
+
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState"> Last Name</label>
+                        <input type="text" class="form-control" value="@Model.OwnerLastName" readonly placeholder="Last name">
+
+                    </div>
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group col-md-4">
+                        <label for="inputState"> Salutation</label>
+                        <select id="inputState" class="form-control" value="@Model.OwnerSalutation" disabled>
+                            <option>Mr.</option>
+                            <option>Miss.</option>
+                            <option>Mrs.</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="inputState"> Age</label>
+                        <input type="number" class="form-control" readonly placeholder="Age" value="@Model.OwnerAge">
+
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState"> PAN</label>
+                        <input type="text" class="form-control" readonly placeholder="PAN" value="@Model.OwnerPan">
+
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Address</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" asp-for="@Model.OwnerAddress" readonly></textarea>
+
+                        </div>
+                    </div>
+                </div>
+                @*############## End Owner ##############*@
+                <br />
+                Tenant Deatils
+                <hr />
+                <div class="form-row">
+
+                    <div class="form-group col-md-4">
+                        <label for="inputState"> First Name</label>
+                        <input type="text" class="form-control" readonly placeholder="First Name" value="@Model.TenantFirstName" name="AgreementDetailsFileData.TenantFirstName">
+
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState"> Middle Name</label>
+                        <input type="text" class="form-control" readonly placeholder="Middle Name" value="@Model.TenantMiddleName" name="AgreementDetailsFileData.TenantMiddleName">
+
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState"> Last Name</label>
+                        <input type="text" class="form-control" readonly placeholder="Last name" value="@Model.TenantLastName" name="AgreementDetailsFileData.TenantLastName">
+
+                    </div>
+                </div>
+                <div class="form-row">
+
+                    <div class="form-group col-md-4">
+                        <label for="inputState"> Salutation</label>
+                        <select id="inputState" class="form-control" disabled value="@Model.TenantSalutation" name="AgreementDetailsFileData.TenantSalutation">
+                            <option>Mr.</option>
+                            <option>Miss.</option>
+                            <option>Mrs.</option>
+                        </select>
+
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState"> Age</label>
+                        <input type="number" class="form-control" readonly placeholder="Age" value="@Model.TenantAge" name="AgreementDetailsFileData.TenantAge">
+
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState"> PAN</label>
+                        <input type="text" class="form-control" readonly placeholder="PAN" value="@Model.TenantPan" name="AgreementDetailsFileData.TenantPan">
+
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Address</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" asp-for="@Model.TenantAddress" readonly name="AgreementDetailsFileData.TenantAddress"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group col-md-6">
+                        <label for="exampleFormControlFile1">
+                            Average Rent
+                        </label>
+                        <input type="number" class="form-control-file form-control" id="exampleFormControlFile1" asp-for="@Model.AverageRent" readonly name="AgreementDetailsFileData.AverageRent">
+
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="exampleFormControlFile1">Security Deposit</label>
+                        <input type="number" class="form-control-file form-control" id="exampleFormControlFile1" asp-for="@Model.SecurityDeposit" readonly name="AgreementDetailsFileData.SecurityDeposit">
+
+                    </div>
+
+                </div>
+
+                <hr />
+                <div class="form-row">
+
+                    <div class="form-group col-md-6">
+                        <label for="exampleFormControlFile1">
+                            No. of Month
+                        </label>
+                        <input type="number" class="form-control-file form-control" id="exampleFormControlFile1" asp-for="@Model.Noofmonths" readonly name="AgreementDetailsFileData.Noofmonths">
+
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="exampleFormControlFile1">Start Date</label>
+                        <input type="date" class="form-control-file form-control" id="exampleFormControlFile1" asp-for="@Model.StartDate" readonly name="AgreementDetailsFileData.StartDate">
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+</div>

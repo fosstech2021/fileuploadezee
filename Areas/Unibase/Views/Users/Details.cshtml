@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-﻿@model BasePackageModule1.Models.ApplicationUser
-<div class="container">
-=======
+<script src="~/lib/jquery/jquery.min.js"></script>
+@model List<BasePackageModule1.Models.AgreementDetails>
 ﻿<div class="container">
->>>>>>> fb5dcfc6f11ca72339ce49539bbb15cd51fea8d1
     <div class="row">
+
         <div class="col-sm-12 col-md-12">
             <div class="card">
                 <div class="card-header bg-primary">
@@ -15,21 +13,21 @@
                         <div class="row">
                             <div class="col">
                                 <label>User Name:</label>
-                                <input type="text" value="sarfarazmulick@gmail.com" readonly class="form-control" placeholder="First name">
+                                <input type="text" value="@ViewBag.Users.UserName" readonly class="form-control" placeholder="UserName">
                             </div>
                             <div class="col">
                                 <label>Name:</label>
-                                <input type="text" value="Sarfaraz " class="form-control" placeholder="Last name">
+                                <input type="text" value="@ViewBag.Users.Name" class="form-control" placeholder="Name">
                             </div>
                         </div>
                         <div class="row mt-4">
                             <div class="col">
                                 <label>Phone:</label>
-                                <input type="text" value="86571413459" readonly class="form-control" placeholder="First name">
+                                <input type="text" value="@ViewBag.Users.PhoneNumber" readonly class="form-control" placeholder="Phone Number">
                             </div>
                             <div class="col">
                                 <label>Email:</label>
-                                <input type="text" value="sarfarazmulick@gmail.com" class="form-control" placeholder="Last name">
+                                <input type="text" value="@ViewBag.Users.Email" class="form-control" placeholder="Email">
                             </div>
                         </div>
                         <div class="row mt-4">
@@ -40,53 +38,152 @@
                         </div>
                     </form>
                     <h4>Address</h4>
-                    <p>,,, </p>
+                    <p>@ViewBag.Users.StreetAddress</p>
                 </div>
                 <div class="card-footer"></div>
             </div>
 
         </div>
 
-        <div class="col-sm-12 col-md-12">
-            <div class="file-upload" style="border: 1px dashed; padding: 40px;">
-                <form>
-                    <div class="row">
-                        <div class="col">
-                            <input type="file" accept="*" placeholder="Upload their Document" />
-                        </div>
-                        <div class="col">
-
-                            <input type="submit" value="Submit" />
-                        </div>
-                    </div>
-
-                </form>
-            </div>
-        </div>
     </div>
     <hr />
+
     <div class="row">
         <div class="col-12">
-            <h4>All Agreement</h4>
+            <h4>User Agreement Details</h4>
         </div>
         <div class="col-12">
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Date</th>
+                        <th>Start Date</th>
                         <th>Download</th>
                         <th>View</th>
+                        <th>Upload Document</th>
                     </tr>
                 </thead>
                 <tbody>
+                    @if (Model.Count > 0)
+                    {
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td> @item.StartDate </td>
+                                <td>
+
+                                    <form enctype="multipart/form-data" method="post" asp-action="DownloadUserUploadedFile">
+                                        <input name="id" type="text" hidden value="@item.Id" />
+                                        <button type="submit" class="btn bg-primary fa fa-download text-light text-center"></button>
+                                    </form>
+
+                                </td>
+
+                                <td>
+                                    @*<a href=""><i class="fa fa-eye text-dark"></i></a>*@
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-primary fa fa-eye text-light  text-center " data-toggle="ajax-modal" data-target="#OwnerModal" data-url="@Url.Action($"DetailsPopup", new { id = item.Id })">
+                                            </button>
+
+                                            <!-- Modal -->
+                                            <div id="placeholderhere">
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+                                </td>
+                                <td>
+                                    <form enctype="multipart/form-data" method="post" asp-action="UploadDocuments">
+                                        <input name="ID" type="text" hidden value="@item.Id" />
+                                        <input type="file" accept="*" name="file" placeholder="Upload their Document" />
+                                        <input type="submit" value="Submit" />
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4"> No records Found </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="row">
+        <div class="col-12">
+            <h4>Admin Uploaded Agreement Details</h4>
+        </div>
+        <div class="col-12">
+            <table class="table table-bordered">
+                <thead>
                     <tr>
-                        <td>6/8/2021 10:18:09 PM</td>
-                        <td><a href=""><i class="fa fa-download text-dark"></i></a></td>
-                        <td><a href=""><i class="fa fa-eye text-dark"></i></a></td>
+                        <th>Uploaded For Start Date</th>
+                        <th>Download</th>
                     </tr>
+                </thead>
+                <tbody>
+                    @if (ViewBag.AdminUpload.Count > 0)
+                    {
+                        @foreach (var item in ViewBag.AdminUpload)
+                        {
+                            <tr>
+                                <td> @item.AgreementDetails.StartDate </td>
+                                <td>
+                                    <form enctype="multipart/form-data" method="post" asp-action="DownloadAdminUploadedFile">
+                                        <input name="id" type="text" hidden value="@item.Id" />
+                                        <button type="submit" class="btn bg-primary fa fa-download text-light text-center"></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="2"> No records Found </td>
+                        </tr>
+                    }
+
                 </tbody>
             </table>
         </div>
     </div>
 
 </div>
+<script>
+    $(document).ready(function () {
+        var placeholder = $('#placeholderhere')
+        $('button[data-toggle="ajax-modal"]').click(function (event) {
+            debugger;
+            var url = $(this).data('url');
+            $.ajax({
+                type: "get",
+                url: url,
+                success: function (response) {
+                    placeholder.html(response)
+                    placeholder.find('.modal').modal('show')
+                },
+                failure: function (response) {
+                
+                },
+                error: function (response) {
+                    
+                }
+            });
+
+        }
+        )
+    })
+</script>
